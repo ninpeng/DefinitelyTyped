@@ -33,6 +33,7 @@ declare module facebook.Pixel {
         (eventType:string, eventName:string, parameters:PurchaseParameters):void;
         (eventType:string, eventName:string, parameters:LeadParameters):void;
         (eventType:string, eventName:string, parameters:CompleteRegistrationParameters):void;
+        (eventType:string, eventName:string, parameters:CustomEventParameters):void;
 
         (eventType:string, eventName:string, parameters:facebook.Pixel.DPA.AddToCartParameters):void;
         (eventType:string, eventName:string, parameters:facebook.Pixel.DPA.PurchaseParameters):void;
@@ -116,6 +117,8 @@ declare module facebook.Pixel {
         content_name?:string;
         status?:boolean;
     }
+
+    type CustomEventParameters = Record<string, any>;
 }
 
 // For Facebook Tag API using Dynamic Product Ads
